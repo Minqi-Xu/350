@@ -1,0 +1,101 @@
+====== test_public.log ======
+>SPLIT<
+>TEST=basic1<
+>Program Output<
+>Expected Output<
+Hello World
+>SPLIT<
+>TEST=basic2<
+>Program Output<
+>Expected Output<
+Line 1
+Line 2
+>SPLIT<
+>TEST=basic3<
+>Program Output<
+>Expected Output<
+basic1
+basic2
+basic3
+>SPLIT<
+>TEST=pipefinal<
+>Program Output<
+>Output File Contents<
+>Error File Contents<
+>Expected Output<
+>Output File Contents<
+touchtxt
+>Error File Contents<
+>SPLIT<
+>TEST=pipeone<
+>Program Output<
+>Output File Contents<
+>Error File Contents<
+>Expected Output<
+touchtxt
+>Output File Contents<
+>Error File Contents<
+>SPLIT<
+>TEST=pipetwo<
+>Program Output<
+>Output File Contents<
+>Error File Contents<
+>Expected Output<
+      1       1       9
+>Output File Contents<
+>Error File Contents<
+>SPLIT<
+>TEST=redirinput<
+>Program Output<
+>Output File Contents<
+>Error File Contents<
+>Expected Output<
+touchtxt
+>Output File Contents<
+>Error File Contents<
+>SPLIT<
+>TEST=redirinputoutput<
+>Program Output<
+>Output File Contents<
+>Error File Contents<
+>Expected Output<
+>Output File Contents<
+touchtxt
+>Error File Contents<
+>SPLIT<
+>TEST=rediroutput<
+>Program Output<
+>Output File Contents<
+>Error File Contents<
+>Expected Output<
+>Output File Contents<
+basic
+redirpipe
+run.sh
+sampletxt
+verify.py
+>Error File Contents<
+>SPLIT<
+>TEST=rediroutputinput<
+>Program Output<
+>Output File Contents<
+>Error File Contents<
+>Expected Output<
+>Output File Contents<
+touchtxt
+>Error File Contents<
+====== test_public.err.log ======
+timeout: failed to run command './shell': No such file or directory
+timeout: failed to run command './shell': No such file or directory
+timeout: failed to run command './shell': No such file or directory
+timeout: failed to run command './shell': No such file or directory
+timeout: failed to run command './shell': No such file or directory
+timeout: failed to run command './shell': No such file or directory
+timeout: failed to run command './shell': No such file or directory
+timeout: failed to run command './shell': No such file or directory
+timeout: failed to run command './shell': No such file or directory
+timeout: failed to run command './shell': No such file or directory
+====== compile.log ======
+gcc: error: my_mini_shell.c: No such file or directory
+gcc: fatal error: no input files
+compilation terminated.

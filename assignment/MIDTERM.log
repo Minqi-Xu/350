@@ -1,0 +1,316 @@
+====== test_public.log ======
+>SPLIT<
+>TEST=basic_bg<
+>Program Output<
+hello
+
+>Expected Output<
+hello
+>Start Time<
+1649124659
+>Stop Time<
+1649124659
+>Target Time Min<
+0
+>Target Time Max<
+1
+>SPLIT<
+>TEST=basic_cd_arg<
+>Program Output<
+/bin
+>Expected Output<
+/bin
+>Start Time<
+1649124659
+>Stop Time<
+1649124659
+>Target Time Min<
+0
+>Target Time Max<
+1
+>SPLIT<
+>TEST=basic_cd_arg_space<
+>Program Output<
+/bin
+>Expected Output<
+/bin
+>Start Time<
+1649124659
+>Stop Time<
+1649124659
+>Target Time Min<
+0
+>Target Time Max<
+1
+>SPLIT<
+>TEST=basic_echo<
+>Program Output<
+Hello World
+
+>Expected Output<
+Hello World
+>Start Time<
+1649124659
+>Stop Time<
+1649124659
+>Target Time Min<
+0
+>Target Time Max<
+1
+>SPLIT<
+>TEST=basic_error<
+>Program Output<
+An error has occurred
+
+>Expected Output<
+An error has occurred
+>Start Time<
+1649124659
+>Stop Time<
+1649124659
+>Target Time Min<
+0
+>Target Time Max<
+1
+>SPLIT<
+>TEST=basic_exit<
+>Program Output<
+You should see this.
+
+>Expected Output<
+You should see this.
+>Start Time<
+1649124659
+>Stop Time<
+1649124659
+>Target Time Min<
+0
+>Target Time Max<
+1
+>SPLIT<
+>TEST=basic_help<
+>Program Output<
+cd
+pwd
+wait
+exit
+help
+
+>Expected Output<
+> cd
+pwd
+wait
+exit
+help
+>
+>Start Time<
+1649124659
+>Stop Time<
+1649124659
+>Target Time Min<
+0
+>Target Time Max<
+1
+>SPLIT<
+>TEST=basic_pwd<
+>Program Output<
+/kernel
+>Expected Output<
+/kernel
+>Start Time<
+1649124659
+>Stop Time<
+1649124659
+>Target Time Min<
+0
+>Target Time Max<
+1
+>SPLIT<
+>TEST=basic_wait<
+>Program Output<
+Bye
+
+>Expected Output<
+Bye
+>Start Time<
+1649124659
+>Stop Time<
+1649124662
+>Target Time Min<
+2
+>Target Time Max<
+4
+>SPLIT<
+>TEST=stderr_error<
+>Program Output<
+An error has occurred
+
+>Expected Output<
+An error has occurred
+>Start Time<
+1649124665
+>Stop Time<
+1649124665
+>Target Time Min<
+0
+>Target Time Max<
+1
+>SPLIT<
+>TEST=stderr_formaterr<
+>Program Output<
+An error has occurred
+
+>Expected Output<
+An error has occurred
+>Start Time<
+1649124665
+>Stop Time<
+1649124665
+>Target Time Min<
+0
+>Target Time Max<
+1
+>SPLIT<
+>TEST=batch_lv1<
+>Program Output<
+K15941
+\.Who..............................................
+.\.Is..............................................
+..\.Dr.............................................
+...\.Oscar.........................................
+....\.Jose.........................................
+.....\.Tsalapatis..................................
+......|.............................___............
+......|.........................,-""...`...........
+......|.......................,`.._...@.)`-._......
+......|....................../..,`.`-._<.===--.....
+......|...................../../...................
+......|..................../..;....................
+......|........_........../...;....................
+..(`._|..._.-"".""--..__,`....|....................
+..<_..`-""....................\\...................
+...<`-..........................:..................
+....(__...<__...................;..................
+......`-....`-.__......._.`..../...................
+......|..\......`-.__,-`...._,`....................
+......|...`._....,..../__,-`.......................
+......|......""._\__,`<.<____......................
+......|.........|.|..`----.`.......................
+......|.........|.|........\.`.....................
+......|.........;.|___......\-``...................
+......|.........\...--<............................
+......|..........`.`.<.............................
+......|............`-`.............................
+.......Fig.1..Dr.Oscar.Jose.Tsalapatis.............
+....................Now............................
+....................You............................
+...................Knew............................
+>Expected Output<
+K15941
+\.Who..............................................
+.\.Is..............................................
+..\.Dr.............................................
+...\.Oscar.........................................
+....\.Jose.........................................
+.....\.Tsalapatis..................................
+......|.............................___............
+......|.........................,-""...`...........
+......|.......................,`.._...@.)`-._......
+......|....................../..,`.`-._<.===--.....
+......|...................../../...................
+......|..................../..;....................
+......|........_........../...;....................
+..(`._|..._.-"".""--..__,`....|....................
+..<_..`-""....................\\...................
+...<`-..........................:..................
+....(__...<__...................;..................
+......`-....`-.__......._.`..../...................
+......|..\......`-.__,-`...._,`....................
+......|...`._....,..../__,-`.......................
+......|......""._\__,`<.<____......................
+......|.........|.|..`----.`.......................
+......|.........|.|........\.`.....................
+......|.........;.|___......\-``...................
+......|.........\...--<............................
+......|..........`.`.<.............................
+......|............`-`.............................
+.......Fig.1..Dr.Oscar.Jose.Tsalapatis.............
+....................Now............................
+....................You............................
+...................Knew............................
+>Start Time<
+1649124665
+>Stop Time<
+1649124665
+>Target Time Min<
+0
+>Target Time Max<
+1
+>SPLIT<
+>TEST=batch_lv99<
+>Program Output<
+K1419
+/kernelMakefile
+input
+input2
+main.c
+myshell
+test.txt
+/libcpp
+init
+lsb
+systemd
+terminfo
+udev
+x86_64-linux-gnu
+/usrtotal 40
+drwxr-xr-x 1 root root 4096 Mar  1 19:27 .
+drwxr-xr-x 1 root root 4096 Apr  5 02:10 ..
+drwxr-xr-x 1 root root 4096 Mar 13 17:11 bin
+drwxr-xr-x 2 root root 4096 Apr 24  2018 games
+drwxr-xr-x 1 root root 4096 Mar 13 17:11 include
+drwxr-xr-x 1 root root 4096 Mar 13 17:11 lib
+drwxr-xr-x 1 root root 4096 Mar  1 19:27 local
+drwxr-xr-x 1 root root 4096 Mar 13 17:11 sbin
+drwxr-xr-x 1 root root 4096 Mar 13 17:06 share
+drwxr-xr-x 2 root root 4096 Apr 24  2018 src
+An error has occurred
+>Expected Output<
+K1419
+/kernel
+Makefile
+input
+input2
+main.c
+myshell
+test.txt
+/lib
+cpp
+init
+lsb
+systemd
+terminfo
+udev
+x86_64-linux-gnu
+/usr
+total 40
+drwxr-xr-x 1 root root 4096 Mar  1 19:27 .
+drwxr-xr-x 1 root root 4096 Apr  5 02:10 ..
+drwxr-xr-x 1 root root 4096 Mar 13 17:11 bin
+drwxr-xr-x 2 root root 4096 Apr 24  2018 games
+drwxr-xr-x 1 root root 4096 Mar 13 17:11 include
+drwxr-xr-x 1 root root 4096 Mar 13 17:11 lib
+drwxr-xr-x 1 root root 4096 Mar  1 19:27 local
+drwxr-xr-x 1 root root 4096 Mar 13 17:11 sbin
+drwxr-xr-x 1 root root 4096 Mar 13 17:06 share
+drwxr-xr-x 2 root root 4096 Apr 24  2018 src
+bash: line 12: fdalsjfklajsd: command not found
+>Start Time<
+1649124665
+>Stop Time<
+1649124668
+>Target Time Min<
+3
+>Target Time Max<
+4
+====== compile.log ======

@@ -1,0 +1,53 @@
+====== test_public.log ======
+>SPLIT<
+>TEST=a2q1.py<
+>Program Output<
+Test: article (20), seed (61), thread (4) passes
+Test: article (20), seed (24), thread (8) passes
+Test: article (30), seed (9), thread (4) passes
+Test: article (30), seed (41), thread (8) passes
+Test: article (40), seed (1), thread (4) passes
+Test: article (40), seed (33), thread (8) passes
+Total Score is as follows: 6/6
+>SPLIT<
+>TEST=a2q2.py<
+>Program Output<
+Test: consumers (10), producers (5), ratio (4) passes
+Test: consumers (10), producers (10), ratio (4) passes
+Test: consumers (20), producers (5), ratio (4) passes
+Test: consumers (20), producers (10), ratio (4) passes
+Total Score is as follows: 6/6
+====== compile.log ======
+rm -f main.o map.o a.out
+gcc -g -c -Wall main.c
+gcc -g -c -Wall map.c
+map.c: In function 'MultithreadedWordCount':
+map.c:70:43: warning: passing argument 3 of 'pthread_create' from incompatible pointer type [-Wincompatible-pointer-types]
+         pthread_create(&threads[i], NULL, &countMatch, &a[i]);
+                                           ^
+In file included from data.h:15:0,
+                 from map.c:14:
+/usr/include/pthread.h:234:12: note: expected 'void * (*)(void *)' but argument is of type 'void (*)(struct args *)'
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+map.c:76:50: warning: passing argument 3 of 'pthread_create' from incompatible pointer type [-Wincompatible-pointer-types]
+     pthread_create(&threads[NUMTHREADS-1], NULL, &countMatch, &a[NUMTHREADS-1]);
+                                                  ^
+In file included from data.h:15:0,
+                 from map.c:14:
+/usr/include/pthread.h:234:12: note: expected 'void * (*)(void *)' but argument is of type 'void (*)(struct args *)'
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+map.c:79:34: warning: passing argument 2 of 'pthread_join' from incompatible pointer type [-Wincompatible-pointer-types]
+         pthread_join(threads[i], &ans[i]);
+                                  ^
+In file included from data.h:15:0,
+                 from map.c:14:
+/usr/include/pthread.h:251:12: note: expected 'void **' but argument is of type 'int **'
+ extern int pthread_join (pthread_t __th, void **__thread_return);
+            ^~~~~~~~~~~~
+gcc -g main.o map.o -o a.out -pthread
+rm -f assignment.o orderme.o a.out
+gcc -g -c -Wall assignment.c
+gcc -g -c -Wall orderme.c
+gcc -g assignment.o orderme.o -o a.out -pthread

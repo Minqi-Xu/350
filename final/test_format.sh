@@ -1,0 +1,63 @@
+#!/bin/bash
+
+image-5-output() {
+    cat <<EOF
+disk formatted.
+SuperBlock:
+    magic number is valid
+    5 blocks
+    1 inode blocks
+    128 inodes
+EOF
+}
+
+image-20-output() {
+    cat <<EOF
+disk formatted.
+SuperBlock:
+    magic number is valid
+    20 blocks
+    2 inode blocks
+    256 inodes
+EOF
+}
+
+image-200-output() {
+    cat <<EOF
+disk formatted.
+SuperBlock:
+    magic number is valid
+    200 blocks
+    20 inode blocks
+    2560 inodes
+EOF
+}
+
+test-input() {
+    cat <<EOF
+format
+debug
+EOF
+}
+
+test-format() {
+    DISK=$1
+    BLOCKS=$2
+    OUTPUT=$3
+
+    cp $DISK $DISK.formatted
+    #echo -n "Testing format on $DISK.formatted ... "
+    prog_out=$(test-input | ./bin/sfssh $DISK.formatted $BLOCKS 2> /dev/null)
+    prog_out=$(printf "$prog_out" | grep -v "block reads" | grep -v "block writes")
+    if diff -u <(printf "$prog_out\n") <($OUTPUT) > test.log; then
+    	echo "[RESULT]Success"
+    else
+    	echo "[RESULT]Failure"
+    	cat test.log
+    fi
+    rm -f $DISK.formatted test.log
+}
+
+test-format data/image.5   5   image-5-output
+test-format data/image.20  20  image-20-output
+test-format data/image.200 200 image-200-output

@@ -1,0 +1,8 @@
+Please wait as we grade your assignment
+Section Name                Marks Recieved   Out Of           Comments                                
+basic Tests                 2.0              9.0              Wrong output basic_help                 
+stderr Tests                0                2.0              Wrong output stderr_formaterr           
+batch Tests                 0                2.0              Wrong output batch_lv99                 
+A cumulative log can be found here -  MIDTERM.log
+We will always take the highest grade from all submissions as the final grade
+Note: All submissions are stored and persisted and checked for plagerism after the due date

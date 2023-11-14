@@ -1,0 +1,28 @@
+====== test_public.log ======
+>SPLIT<
+>TEST=a2q1.py<
+>Program Output<
+Test: article (20), seed (84), thread (4) fails
+Test: article (20), seed (91), thread (8) fails
+Test: article (30), seed (43), thread (4) fails
+Test: article (30), seed (28), thread (8) fails
+Test: article (40), seed (78), thread (4) fails
+Test: article (40), seed (11), thread (8) fails
+Total Score is as follows: 0/6
+>SPLIT<
+>TEST=a2q2.py<
+>Program Output<
+Command 'timeout 20s /kernel/.tmp/a2q2/a.out 10 5 4 2> temp.txt > /dev/null' returned non-zero exit status 134.
+Command 'timeout 20s /kernel/.tmp/a2q2/a.out 10 10 4 2> temp.txt > /dev/null' returned non-zero exit status 134.
+Command 'timeout 20s /kernel/.tmp/a2q2/a.out 20 5 4 2> temp.txt > /dev/null' returned non-zero exit status 134.
+Command 'timeout 20s /kernel/.tmp/a2q2/a.out 20 10 4 2> temp.txt > /dev/null' returned non-zero exit status 134.
+Total Score is as follows: 0/6
+====== compile.log ======
+rm -f main.o map.o a.out
+gcc -g -c -Wall main.c
+gcc -g -c -Wall map.c
+gcc -g main.o map.o -o a.out -pthread
+rm -f assignment.o orderme.o a.out
+gcc -g -c -Wall assignment.c
+gcc -g -c -Wall orderme.c
+gcc -g assignment.o orderme.o -o a.out -pthread
